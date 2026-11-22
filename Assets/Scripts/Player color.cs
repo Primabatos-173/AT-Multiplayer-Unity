@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Playercolor : NetworkBehaviour
 {
-    [SerializeField] private SpriteRenderer bodies;
+    [SerializeField] private SpriteRenderer [] bodies;
     [SerializeField] private Color[] playercolor;
 
     [Networked] private int colorindex { get; set; }
@@ -24,7 +24,12 @@ public class Playercolor : NetworkBehaviour
 
     private void applyPlayerColor()
     {
+        
         var currentColor = playercolor[colorindex];
-        bodies.color = currentColor;
+        foreach(var b in bodies)
+        {
+            b.color = currentColor;
+        }
+       
     }
 }

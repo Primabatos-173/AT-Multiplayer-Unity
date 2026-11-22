@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5218560724841527149}
   - component: {fileID: 5712707035761208735}
+  - component: {fileID: 588011561385196509}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80,12 +81,54 @@ MonoBehaviour:
   SortKey: 3798045544
   SendPriority: 1
   EnableInterpolation: 1
-  Flags: 262146
+  Flags: 262402
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 5107555661741162413}
+  - {fileID: 588011561385196509}
+  - {fileID: 1572576019944666872}
   - {fileID: 6017365600828951560}
   ForceRemoteRenderTimeframe: 0
+--- !u!114 &588011561385196509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746966668221558544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkTransform
+  _stateAuthorityChangeErrorCorrectionDelta: 0
+  SyncScale: 0
+  SyncParent: 0
+  _autoAOIOverride: 1
+  ConfigFlags: 0
+  PhysicsSettings:
+    ForecastEnabled: 1
+    DebugPhysics: 0
+    GravityForecast: 2
+    MaxExtrapolationTime: 0.15
+    MinLinearDetectedError: 0.02
+    MinAngularDetectedError: 3
+    DeadzoneVelocityMode: 0
+    MaxLinearError: 0
+    MaxAngularError: 0
+    LowCorrectionProgressThreshold: 0.015
+    HighErrorSimilarityThreshold: 1
+    MaxErrorTotalTime: 0.5
+    MaxRemoteSleepIgnoreTime: 0.5
+    ErrorCorrectionType: 0
+    LinearVelCorrectionMul: 1
+    AngularVelCorrectionMul: 1
+    PositionCorrectionLerp: 0.15
+    RotationCorrectionLerp: 0.15
+    Spring: 75
+    Damper: 2
+    MinImpactfulCollisionAlignment: 0.3
+    ImpactStartCorrectionTime: 0.1
+    ImpactCorrectionTimeComplete: 0.3
 --- !u!1 &9187975162302765391
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2272426924309091310}
   - component: {fileID: 2297826011140593479}
-  - component: {fileID: 5107555661741162413}
+  - component: {fileID: 1572576019944666872}
   - component: {fileID: 6017365600828951560}
   m_Layer: 0
   m_Name: player sprite
@@ -179,7 +222,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5107555661741162413
+--- !u!114 &1572576019944666872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9be1bf37a51ea34e9c8b6ee663b1360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playercolor
-  bodies: {fileID: 2297826011140593479}
+  bodies:
+  - {fileID: 2297826011140593479}
   playercolor:
   - {r: 0.41960785, g: 0.742179, b: 1, a: 1}
   - {r: 1, g: 0.1716981, b: 0.23401411, a: 1}
+  - {r: 0.23966958, g: 1, b: 0.17254901, a: 1}
