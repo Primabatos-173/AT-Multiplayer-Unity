@@ -9,6 +9,7 @@ public class Playercolor : NetworkBehaviour
 
     [Networked] private int colorindex { get; set; }
 
+
     public override void Spawned()
     {
         if(Object.HasStateAuthority)
